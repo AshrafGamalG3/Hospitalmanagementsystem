@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_app"
+    app:startDestination="@id/splashFragment">
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.example.hospitalmanagementsystem.ui.splash.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash"
+
+        >
+        <action
+            android:id="@+id/action_splashFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true"
+            />
+        <action
+            android:id="@+id/action_splashFragment_to_hrHomeFragment"
+            app:destination="@id/hrHomeFragment"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true"
+            />
+        <action
+            android:id="@+id/action_splashFragment_to_receptionHome"
+            app:destination="@id/receptionHome"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true"
+            />
+        <action
+            android:id="@+id/action_splashFragment_to_doctorHomeFragment"
+            app:destination="@id/doctorHomeFragment" />
+        <action
+            android:id="@+id/action_splashFragment_to_nurseHomeFragment"
+            app:destination="@id/nurseHomeFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.hospitalmanagementsystem.ui.login.presentaion.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_receptionHome"
+            app:destination="@id/receptionHome"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true"
+            />
+        <action
+            android:id="@+id/action_loginFragment_to_hrHomeFragment"
+            app:destination="@id/hrHomeFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true"
+            />
+        <action
+            android:id="@+id/action_loginFragment_to_doctorHomeFragment"
+            app:destination="@id/doctorHomeFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true"
+            />
+        <action
+            android:id="@+id/action_loginFragment_to_nurseHomeFragment"
+            app:destination="@id/nurseHomeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/receptionHome"
+        android:name="com.example.hospitalmanagementsystem.ui.reception.presentaion.ReceptionHome"
+        android:label="fragment_reception_home"
+        tools:layout="@layout/fragment_reception_home" >
+        <action
+            android:id="@+id/action_receptionHome_to_profileFragment"
+            app:destination="@id/profileFragment"
+
+
+            />
+
+        <action
+            android:id="@+id/action_receptionHome_to_receptionCallsFragment"
+            app:destination="@id/receptionCallsFragment"
+
+            />
+        <action
+            android:id="@+id/action_receptionHome_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/receptionHome"
+            />
+        <action
+            android:id="@+id/action_receptionHome_to_reportsFragment"
+            app:destination="@id/reportsFragment" />
+        <action
+            android:id="@+id/action_receptionHome_to_tasksFragment"
+            app:destination="@id/tasksFragment" />
+        <action
+            android:id="@+id/action_receptionHome_to_attendanceFragment"
+            app:destination="@id/attendanceFragment" />
+
+
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.hospitalmanagementsystem.ui.common.profile.presentaion.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" >
+
+        <action
+            android:id="@+id/action_profileFragment_to_receptionHome"
+            app:destination="@id/receptionHome"
+            app:popUpTo="@id/profileFragment"
+            app:popUpToInclusive="true"
+            />
+        <action
+            android:id="@+id/action_profileFragment_to_hrHomeFragment"
+            app:destination="@id/hrHomeFragment"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/profileFragment"
+            />
+        <argument
+            android:name="id"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_profileFragment_to_employeeFragment"
+            app:destination="@id/employeeFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_doctorHomeFragment"
+            app:destination="@id/doctorHomeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/receptionCallsFragment"
+        android:name="com.example.hospitalmanagementsystem.ui.reception.presentaion.ReceptionCallsFragment"
+        android:label="fragment_reception_calls"
+        tools:layout="@layout/fragment_reception_calls" >
+        <action
+            android:id="@+id/action_receptionCallsFragment_to_receptionHome"
+            app:destination="@id/receptionHome"
+            app:popUpTo="@id/receptionCallsFragment"
+            app:popUpToInclusive="true"
+            />
+        <action
+            android:id="@+id/action_receptionCallsFragment_to_createCallFragment"
+            app:destination="@id/createCallFragment"
+
+            />
+        <action
+            android:id="@+id/action_receptionCallsFragment_to_callDetails"
+            app:destination="@id/callDetails" />
+    </fragment>
+    <fragment
+        android:id="@+id/hrHomeFragment"
+        android:name="com.example.hospitalmanagementsystem.ui.hr.presentation.HrHomeFragment"
+        android:label="fragment_hr_home"
+        tools:layout="@layout/fragment_hr_home" >
+        <action
+            android:id="@+id/action_hrHomeFragment_to_profileFragment"
+            app:destination="@id/profileFragment"
+
+            />
+        <action
+            android:id="@+id/action_hrHomeFragment_to_employeeFragment"
+            app:destination="@id/employeeFragment" />
+        <action
+            android:id="@+id/action_hrHomeFragment_to_reportsFragment"
+            app:destination="@id/reportsFragment" />
+        <action
+            android:id="@+id/action_hrHomeFragment_to_tasksFragment"
+            app:destination="@id/tasksFragment" />
+        <action
+            android:id="@+id/action_hrHomeFragment_to_attendanceFragment"
+            app:destination="@id/attendanceFragment" />
+
+
+    </fragment>
+    <fragment
+        android:id="@+id/createCallFragment"
+        android:name="com.example.hospitalmanagementsystem.ui.reception.presentaion.CreateCallFragment"
+        android:label="fragment_create_call"
+        tools:layout="@layout/fragment_create_call" >
+        <action
+            android:id="@+id/action_createCallFragment_to_receptionCallsFragment"
+            app:destination="@id/receptionCallsFragment"
+            app:popUpTo="@id/createCallFragment"
+            app:popUpToInclusive="true"
+            />
+        <action
+            android:id="@+id/action_createCallFragment_to_selectDoctorForCallsFragment"
+            app:destination="@id/selectDoctorForCallsFragment"
+
+            />
+        <action
+            android:id="@+id/action_createCallFragment_to_requestCompleteFragment"
+            app:destination="@id/requestCompleteFragment"
+            app:popUpTo="@id/createCallFragment"
+            app:popUpToInclusive="true"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/selectDoctorForCallsFragment"
+        android:name="com.example.hospitalmanagementsystem.ui.common.calls_cases.SelectDoctorForCallsFragment"
+        android:label="fragment_select_doctor_for_calls"
+        tools:layout="@layout/fragment_select_doctor_for_calls" >
+        <action
+            android:id="@+id/action_selectDoctorForCallsFragment_to_createCallFragment"
+            app:destination="@id/createCallFragment"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/selectDoctorForCallsFragment"
+            />
+        <argument
+            android:name="type"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/requestCompleteFragment"
+        android:name="com.example.hospitalmanagementsystem.ui.reception.presentaion.RequestCompleteFragment"
+        android:label="fragment_request_complete"
+        tools:layout="@layout/fragment_request_complete" >
+        <action
+            android:id="@+id/action_requestCompleteFragment_to_receptionHome"
+            app:destination="@id/receptionHome"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/requestCompleteFragment"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/employeeFragment"
+        android:name="com.example.hospitalmanagementsystem.ui.hr.presentation.EmployeeFragment"
+        android:label="fragment_employee"
+        tools:layout="@layout/fragment_employee" >
+        <action
+            android:id="@+id/action_employeeFragment_to_hrHomeFragment"
+            app:destination="@id/hrHomeFragment"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/employeeFragment"
+            />
+        <action
+            android:id="@+id/action_employeeFragment_to_newUserFragment"
+            app:destination="@id/newUserFragment" />
+        <action
+            android:id="@+id/action_employeeFragment_to_profileFragment"
+            app:destination="@id/profileFragment"
+
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/newUserFragment"
+        android:name="com.example.hospitalmanagementsystem.ui.hr.presentation.NewUserFragment"
+        android:label="fragment_new_user"
+        tools:layout="@layout/fragment_new_user" >
+        <action
+            android:id="@+id/action_newUserFragment_to_employeeFragment"
+            app:destination="@id/employeeFragment"
+            app:popUpTo="@id/newUserFragment"
+            app:popUpToInclusive="true"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/callDetails"
+        android:name="com.example.hospitalmanagementsystem.ui.reception.presentaion.CallDetails"
+        android:label="fragment_call_details"
+        tools:layout="@layout/fragment_call_details" >
+        <action
+            android:id="@+id/action_callDetails_to_receptionCallsFragment"
+            app:destination="@id/receptionCallsFragment"
+            app:popUpTo="@id/callDetails"
+            app:popUpToInclusive="true"
+            />
+        <argument
+            android:name="id"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/doctorHomeFragment"
+        android:name="com.example.hospitalmanagementsystem.ui.doctor.presentation.DoctorHomeFragment"
+        android:label="fragment_doctor_home"
+        tools:layout="@layout/fragment_doctor_home" >
+        <action
+            android:id="@+id/action_doctorHomeFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_doctorHomeFragment_to_allCallsFragment"
+            app:destination="@id/allCallsFragment" />
+        <action
+            android:id="@+id/action_doctorHomeFragment_to_allCasesFragment"
+            app:destination="@id/allCasesFragment" />
+        <action
+            android:id="@+id/action_doctorHomeFragment_to_reportsFragment"
+            app:destination="@id/reportsFragment" />
+        <action
+            android:id="@+id/action_doctorHomeFragment_to_tasksFragment"
+            app:destination="@id/tasksFragment" />
+        <action
+            android:id="@+id/action_doctorHomeFragment_to_attendanceFragment"
+            app:destination="@id/attendanceFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/caseDetailsFragment"
+        android:name="com.example.hospitalmanagementsystem.ui.doctor.presentation.CaseDetailsFragment"
+        android:label="fragment_case_details"
+        tools:layout="@layout/fragment_case_details" >
+        <argument
+            android:name="id"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_caseDetailsFragment_to_selectDoctorForCallsFragment"
+            app:destination="@id/selectDoctorForCallsFragment" />
+        <action
+            android:id="@+id/action_caseDetailsFragment_to_requestAnalysisFragment"
+            app:destination="@id/requestAnalysisFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/allCallsFragment"
+        android:name="com.example.hospitalmanagementsystem.ui.common.calls_cases.AllCallsFragment"
+        android:label="fragment_all_calls"
+        tools:layout="@layout/fragment_all_calls" />
+    <fragment
+        android:id="@+id/allCasesFragment"
+        android:name="com.example.hospitalmanagementsystem.ui.common.calls_cases.AllCasesFragment"
+        android:label="fragment_all_cases"
+        tools:layout="@layout/fragment_all_cases" >
+        <action
+            android:id="@+id/action_allCasesFragment_to_caseDetailsFragment"
+            app:destination="@id/caseDetailsFragment" />
+        <action
+            android:id="@+id/action_allCasesFragment_to_nurseDetailsFragment"
+            app:destination="@id/nurseDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/requestAnalysisFragment"
+        android:name="com.example.hospitalmanagementsystem.ui.doctor.presentation.RequestAnalysisFragment"
+        android:label="fragment_request_analysis"
+        tools:layout="@layout/fragment_request_analysis" >
+        <argument
+            android:name="case_id"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_requestAnalysisFragment_to_selectDoctorForCallsFragment"
+            app:destination="@id/selectDoctorForCallsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/reportsFragment"
+        android:name="com.example.hospitalmanagementsystem.ui.common.reports.presentation.ReportsFragment"
+        android:label="fragment_reports"
+        tools:layout="@layout/fragment_reports" >
+        <action
+            android:id="@+id/action_reportsFragment_to_showReportFragment"
+            app:destination="@id/showReportFragment" />
+        <action
+            android:id="@+id/action_reportsFragment_to_createReportFragment"
+            app:destination="@id/createReportFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/showReportFragment"
+        android:name="com.example.hospitalmanagementsystem.ui.common.reports.presentation.ShowReportFragment"
+        android:label="fragment_show_report"
+        tools:layout="@layout/fragment_show_report" >
+        <argument
+            android:name="id"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/createReportFragment"
+        android:name="com.example.hospitalmanagementsystem.ui.common.reports.presentation.CreateReportFragment"
+        android:label="fragment_create_report"
+        tools:layout="@layout/fragment_create_report" />
+    <fragment
+        android:id="@+id/taskDetailsFragment"
+        android:name="com.example.hospitalmanagementsystem.ui.common.tasks.presentation.TaskDetailsFragment"
+        android:label="fragment_task_details"
+        tools:layout="@layout/fragment_task_details" >
+        <argument
+            android:name="id"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/tasksFragment"
+        android:name="com.example.hospitalmanagementsystem.ui.common.tasks.presentation.TasksFragment"
+        android:label="fragment_tasks"
+        tools:layout="@layout/fragment_tasks" >
+        <action
+            android:id="@+id/action_tasksFragment_to_taskDetailsFragment"
+            app:destination="@id/taskDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/nurseHomeFragment"
+        android:name="com.example.hospitalmanagementsystem.ui.nurse.presentation.NurseHomeFragment"
+        android:label="fragment_nurse_home"
+        tools:layout="@layout/fragment_nurse_home" >
+        <action
+            android:id="@+id/action_nurseHomeFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_nurseHomeFragment_to_reportsFragment"
+            app:destination="@id/reportsFragment" />
+        <action
+            android:id="@+id/action_nurseHomeFragment_to_tasksFragment"
+            app:destination="@id/tasksFragment" />
+        <action
+            android:id="@+id/action_nurseHomeFragment_to_allCasesFragment"
+            app:destination="@id/allCasesFragment" />
+        <action
+            android:id="@+id/action_nurseHomeFragment_to_attendanceFragment"
+            app:destination="@id/attendanceFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/attendanceFragment"
+        android:name="com.example.hospitalmanagementsystem.ui.common.attendance.presentation.AttendanceFragment"
+        android:label="fragment_attendance"
+        tools:layout="@layout/fragment_attendance" />
+    <fragment
+        android:id="@+id/nurseDetailsFragment"
+        android:name="com.example.hospitalmanagementsystem.ui.nurse.presentation.NurseDetailsFragment"
+        android:label="fragment_nurse_details"
+        tools:layout="@layout/fragment_nurse_details" >
+        <argument
+            android:name="id"
+            app:argType="integer" />
+    </fragment>
+</navigation>
